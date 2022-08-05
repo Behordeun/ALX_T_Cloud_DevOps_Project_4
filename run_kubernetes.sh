@@ -6,12 +6,15 @@ dockerpath=herbehordeun/udacity-cloud-devops-project4
 
 # Step 2
 # Run the Docker Hub container with kubernetes
-kubectl run --generator=run-pod/v1 sklearnapp --image=herbehordeun/udacity-cloud-devops-project4-sklearn:sklearnapp --port=5000
+kubectl create deploy sklearnapp --image $dockerpath
 
 # Step 3:
 # List kubernetes pods
-kubectl get pods
+kubectl get pods, svc, deployments
+sleep 10
+podname = "$(kubectl get pod -o name)"
+
 # Step 4:
 # Forward the container port to a host
-kubectl port-forward sklearnapp 5000:5000
-
+kubectl get pods
+kubectl port-forward $podname --address 0.0.0.0 8000:80

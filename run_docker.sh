@@ -10,4 +10,4 @@ docker build -f Dockerfile . -t sklearnapp --label sklearnapp
 docker image ls --filter label=sklearnapp
 # Step 3: 
 # Run flask app
-docker run -it -p 5000:5000 sklearnapp
+docker run -it -p 5000:5000 sklearn
