@@ -1,20 +1,19 @@
 #!/usr/bin/env bash
 
-# Step 1:
-# This is your Docker ID/path
-dockerpath="herbehordeun/udacity-cloud-devops-project4"
+# This tags and uploads an image to Docker Hub
 
-# Step 2
+#This is your Docker ID/path
+dockerpath=herbehordeun/sklearn-prediction-app
+
 # Run the Docker Hub container with kubernetes
-kubectl create deploy sklearnapp --image $dockerpath
 
-# Step 3:
+kubectl run sklearn-prediction-app\
+    --image=$dockerpath\
+    --port=80 --labels app=sklearn-prediction-app
+
+
 # List kubernetes pods
-kubectl get pods, svc, deployments
-sleep 10
-podname = "$(kubectl get pod -o name)"
-
-# Step 4:
-# Forward the container port to a host
 kubectl get pods
-kubectl port-forward $podname --address 0.0.0.0 8000:80
+
+# Forward the container port to a host
+kubectl port-forward sklearn-prediction-app 8000:80

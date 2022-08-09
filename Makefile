@@ -7,7 +7,7 @@
 
 setup:
 	# Create python virtualenv & source it
-	# source ~/.devops/bin/activate
+	# source ~/venv/bin/activate
 	python3 -m venv ~/.project4
 
 install:
