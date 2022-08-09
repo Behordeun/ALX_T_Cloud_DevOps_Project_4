@@ -2,7 +2,7 @@
 
 # Step 1:
 # This is your Docker ID/path
-dockerpath=herbehordeun/udacity-cloud-devops-project4
+dockerpath="herbehordeun/udacity-cloud-devops-project4"
 
 # Step 2
 # Run the Docker Hub container with kubernetes

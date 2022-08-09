@@ -9,10 +9,11 @@
 dockerpath=herbehordeun/udacity-cloud-devops-project4
 # Step 2:  
 # Authenticate & tag
+docker login --username=herbehordeun
+docker tag sklearnapp:sklearnapp $dockerpath
 echo "Docker ID and Image: $dockerpath"
-docker login --username=josephmfaulkner
-docker tag sklearnapp:sklearnapp herbehordeun/udacity-cloud-devops-project4-sklearn:sklearnapp
+
 
 # Step 3:
 # Push image to a docker repository
-docker push herbehordeun/udacity-cloud-devops-project4-sklearn:sklearnapp
+docker push $dockerpath
