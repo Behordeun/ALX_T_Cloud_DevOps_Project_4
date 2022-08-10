@@ -3,11 +3,10 @@
 ## Complete the following steps to get Docker running locally
 
 # Step 1:
-# Build image and add a descriptive tag
-docker build -f Dockerfile . -t sklearnapp --label sklearnapp
+docker build -t sklearn-prediction-app .
+
 # Step 2: 
-# List docker images
-docker image ls --filter label=sklearnapp
+docker images
+
 # Step 3: 
-# Run flask app
-docker run -it -p 5000:5000 sklearn
+docker run -p 8000:80 sklearn-prediction-app

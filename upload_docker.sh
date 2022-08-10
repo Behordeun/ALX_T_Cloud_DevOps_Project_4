@@ -5,15 +5,13 @@
 
 # Step 1:
 # Create dockerpath
-# dockerpath=<your docker ID/path>
-dockerpath=herbehordeun/udacity-cloud-devops-project4
+dockerpath=herbehordeun/sklearn-prediction-app
+
 # Step 2:  
 # Authenticate & tag
 docker login --username=herbehordeun
-docker tag sklearnapp:sklearnapp $dockerpath
+docker image tag sklearn-prediction-app $dockerpath
 echo "Docker ID and Image: $dockerpath"
 
-
 # Step 3:
-# Push image to a docker repository
-docker push $dockerpath
+docker push $dockerpath:latest
