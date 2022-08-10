@@ -11,8 +11,8 @@ COPY model_data/boston_housing_prediction.joblib /app/model_data/
 ## Step 3:
 # Install packages from requirements.txt
 # hadolint ignore=DL3013
-RUN pip3 install pip --upgrade &&\
-    pip3 install --trusted-host pypi.python.org -r requirements.txt
+RUN pip3 install pip  --no-cache-dir --upgrade &&\
+    pip3 install --trusted-host pypi.python.org --no-cache-dir -r requirements.txt
 ## Step 4:
 # Expose port 80
 EXPOSE 80
