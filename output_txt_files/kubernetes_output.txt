@@ -1,0 +1,10 @@
+(venv) ec2-user:~/environment/ALX_T_Cloud_DevOps_Project_4 (main) $ bash run_kubernetes.sh 
+Error from server (AlreadyExists): pods "sklearn-prediction-app" already exists
+NAME                     READY   STATUS    RESTARTS      AGE
+sklearn-prediction-app   1/1     Running   1 (90s ago)   16h
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+

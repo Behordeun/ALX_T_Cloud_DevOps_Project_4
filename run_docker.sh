@@ -8,5 +8,5 @@ docker build -t sklearn-prediction-app .
 # Step 2: 
 docker images
 
-# Step 3: 
+# Step 3:
 docker run -p 8000:80 sklearn-prediction-app
